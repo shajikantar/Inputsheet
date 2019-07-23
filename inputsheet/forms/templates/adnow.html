@@ -1,0 +1,209 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ADNOW Sheet</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="../static/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="../static/jquery-ui.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+	<h1> Entry Details for ADNOW.... </h1>
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="adnow-form" class="signup-form">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                              <label for="Cntry_name">Country Name</label>
+                                <select id="cname" name="cname" class="form-input">
+                                    {% for ctry in CountryList %}
+                                      <option value="">{{ ctry }}</option>
+                                    {% endfor %}
+                                  </select>
+                             </div>
+						            </div>
+
+						            <div class="form-row">
+                          <div class="form-group">
+                              <label for="Methodology">Methodology</label>
+                              <select id="cname" name="cname" class="form-input">
+                                  {% for ctry in Methodology %}
+                                    <option value="">{{ ctry }}</option>
+                                  {% endfor %}
+                                </select>
+                          </div>
+						             </div>
+
+
+						<div class="form-row">
+                          <div class="form-group">
+                              <label for="PlatMethodology">PlatForm for Methodology</label>
+                              <select id="cname" name="cname" class="form-input">
+                                  {% for ctry in PlatformVal %}
+                                    <option value="">{{ ctry }}</option>
+                                  {% endfor %}
+                                </select>
+                          </div>
+						</div>
+
+
+					   <div class="form-row">
+                  <div class="form-group form-icon">
+                     <label for="birth_date">Fieldwork Start Date (yyyyWeekno)</label>
+                       <input type="text" class="form-input" name="birth_date" id="birth_date" placeholder="MM-DD-YYYY" style="width:100px"/>
+                    </div>
+    					</div>
+
+
+						<div class="form-row">
+                <div class="form-group">
+                     <label for="SL1">Survey Language 1</label>
+                      <select id="sl1name" name="sl1name" class="form-input" style="width: 150px;">
+                                    {% for SList in SlList %}
+                                      <option value="">{{ SList }}</option>
+                                    {% endfor %}
+                      </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="SL2">Survey Language 2</label>
+                      <select id="sl2name" name="sl2name" class="form-input" style="width: 150px;">
+                        {% for SList in SlList %}
+                          <option value="">{{ SList }}</option>
+                        {% endfor %}
+                      </select>
+                </div>
+                         <div class="form-group">
+                              <label for="SL3">Survey Language 3</label>
+                              <select id="sl3name" name="sl3name" class="form-input" style="width: 150px;">
+                                  {% for SList in SlList %}
+                                    <option value="">{{ SList }}</option>
+                                  {% endfor %}
+                                </select>
+                          </div>
+                         <div class="form-group">
+                              <label for="SL4">Survey Language 4</label>
+                              <select id="sl4name" name="sl4name" class="form-input" style="width: 150px;">
+                                  {% for SList in SlList %}
+                                    <option value="">{{ SList }}</option>
+                                  {% endfor %}
+                                </select>
+                          </div>
+						</div>
+            <div class="form-row">
+                         <div class="form-group">
+                              <label for="SL5">Survey Language 5</label>
+                              <select id="sl5name" name="sl5name" class="form-input" style="width: 150px;">
+                                  {% for SList in SlList %}
+                                    <option value="">{{ SList }}</option>
+                                  {% endfor %}
+                                </select>
+                          </div>
+                         <div class="form-group">
+                              <label for="SL6">Survey Language 6</label>
+                              <select id="sl6name" name="sl6name" class="form-input" style="width: 150px;">
+                                  {% for SList in SlList %}
+                                    <option value="">{{ SList }}</option>
+                                  {% endfor %}
+                                </select>
+                          </div>
+                       <div class="form-group">
+                              <label for="SL7">Survey Language 7</label>
+                              <select id="sl7name" name="sl7name" class="form-input" style="width: 150px;">
+                                  {% for SList in SlList %}
+                                    <option value="">{{ SList }}</option>
+                                  {% endfor %}
+                                </select>
+                          </div>
+
+                         <div class="form-group">
+                              <label for="SL8">Survey Language 8</label>
+                              <select id="sl8name" name="sl8name" class="form-input" style="width: 150px;">
+                                  {% for SList in SlList %}
+                                    <option value="">{{ SList }}</option>
+                                  {% endfor %}
+                                </select>
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                         <label for="SD">Survey Director for Web (CAWI ONLY)</label>
+                         <select id="sl8name" name="sl8name" class="form-input" style="width: 150px;">
+                               <option value="NULL">None</option>
+                               <option value="Yes">Yes</option>
+                               <option value="No">No</option>
+                           </select>
+
+                          <label for="ENL">**English Link for Live</label>
+                            <select id="sl8name" name="sl8name" class="form-input" style="width: 150px">
+                                <option value="NULL">None</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                      </div>
+
+                      <div class="form-row">
+                            <div class="form-group">
+                              <label for="dEmail">Director Email Address</label>
+                              <input type="email" class="form-input" name="dEmail" id="dEmail" style="width: 200px;">
+
+                               <label for="csEmail">CS Email Address</label>
+                               <input type="email" class="form-input" name="csEmail" id="csEmail" style="width: 200px;">
+
+                        <label for="CIF">Client Name</label>
+                          <select id="CIF_" name="CIF_" class="form-input" style="width: 150px;">
+                            {% for SList in ClientList %}
+                              <option value="">{{ SList }}</option>
+                            {% endfor %}
+                          </select>
+                            </div>
+              </div>
+
+                      <div class="form-row">
+                        <div class="form-group">
+                        <label for="CIF">Adnow Country</label>
+                          <select id="CIF_" name="CIF_" class="form-input" style="width: 150px;">
+                              {% for SList in CountryList %}
+                                <option value="">{{ SList }}</option>
+                              {% endfor %}
+                          <select>
+
+                    <label for="CIF">Category In Form</label>
+                      <select id="CIF_" name="CIF_" class="form-input" style="width: 150px;">
+                        {% for SList in CategoryInForm %}
+                          <option value="">{{ SList }}</option>
+                        {% endfor %}
+                      <select>
+
+                    <label for="CIF">Category In DataBase   </label>
+                      <select id="CID_" name="CID_" class="form-input" style="width: 150px;">
+                        {% for SList in CategoryInDB  %}
+                          <option value="">{{ SList }}</option>
+                        {% endfor %}
+                    <select>
+                    </div>
+                  </div>
+
+                    <div class="form-group">
+                            <input type="submit"  "padding: 150px 32px" name="submit" id="submit" class="form-submit" value="Save Details"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
